@@ -1,3 +1,199 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "standard-react",
+    "plugin:cypress/recommended",
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended",
+    "plugin:testing-library/react",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+    "plugin:jest-formatting/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "import",
+    "react-hooks",
+    "cypress",
+    "testing-library",
+    "jest",
+    "jest-formatting",
+    "prettier"
+  ],
+  "globals": {
+    "jest": true,
+    "describe": true,
+    "fdescribe": true,
+    "xdescribe": true,
+    "it": true,
+    "xit": true,
+    "beforeAll": true,
+    "beforeEach": true,
+    "afterAll": true,
+    "afterEach": true,
+    "expect": true,
+    "localStorage": true,
+    "Event": true,
+    "Headers": true,
+    "Request": true
+  },
+  "rules": {
+    "no-console": 1,
+    "object-curly-spacing": [
+      2,
+      "always"
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "prefer-promise-reject-errors": 0,
+    "jest/consistent-test-it": [
+      "error",
+      {
+        "fn": "it"
+      }
+    ],
+    "react/jsx-indent": 0,
+    "quotes": [
+      "error",
+      "double",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "testing-library/prefer-wait-for": "error",
+    "testing-library/no-wait-for-empty-callback": "error",
+    "testing-library/no-dom-import": "error",
+    "testing-library/no-debugging-utils": "error",
+    "react/no-unused-prop-types": "off",
+    "import/no-anonymous-default-export": "off",
+    "prettier/prettier": "off",
+    "jest/no-mocks-import": 0,
+    "jest/expect-expect": 0,
+    "jest/no-conditional-expect": 0,
+    "jest/no-commented-out-tests": 0,
+    "jest/valid-title": 0,
+    "jest/no-export": 0,
+    "jest/no-standalone-expect": 0,
+    "jest/no-try-expect": 0,
+    "no-nested-ternary": "error",
+    "import/no-unresolved": "off",
+    "import/named": "off",
+    "import/namespace": "off",
+    "import/no-named-as-default": "off",
+    "import/export": "off",
+    "sort-imports": [
+      "warn",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true
+      }
+    ],
+    "import/order": [
+      1,
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          [
+            "parent",
+            "sibling",
+            "index"
+          ],
+          "object",
+          "type",
+          "unknown"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "react*",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@*",
+            "group": "external"
+          },
+          {
+            "pattern": "prop-types",
+            "group": "external"
+          },
+          {
+            "pattern": "{hooks,hooks/**}",
+            "group": "internal"
+          },
+          {
+            "pattern": "hocs/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "helpers/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "resources/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "services/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "store/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "components/**",
+            "group": "parent"
+          },
+          {
+            "pattern": "{types/**,**/types,types}",
+            "group": "type"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": [
+          "react"
+        ],
+        "newlines-between": "never",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    ".next/"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "pages/**/*.tsx"
+      ],
+      "rules": {
+        "react/prop-types": 0
+      }
+    },
+    {
+      "files": [
+        "*.test.*"
+      ],
+      "plugins": [
+        "jest"
+      ],
+      "extends": [
+        "plugin:jest/recommended"
+      ],
+      "rules": {
+        "jest/prefer-expect-assertions": "off"
+      }
+    }
+  ]
 }
