@@ -4,6 +4,7 @@ import styled from "@emotion/styled"
 
 export const Nav = styled.nav`
   background: ${({ theme }) => theme.palette.primary.main};
+  user-select: none;
 `
 
 export type TCorner = {
@@ -28,6 +29,8 @@ export const Corner = styled(Image)<TCorner>(({ division, position }) => {
 export const CornerContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  user-select: none;
+  pointer-events: none;
 `
 
 export const NavLink = styled.a<{ authorisation?: boolean }>`
