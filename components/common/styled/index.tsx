@@ -41,9 +41,15 @@ export const NavLink = styled.a<{ authorisation?: boolean }>`
   border-radius: 6px;
   transition-duration: 0.4s;
   ${({ authorisation }) => authorisation && "font-weight: bold; border: 1px solid;"};
+
   :hover {
+    box-shadow: inset 2px 2px 4px;
+  }
+
+  :active {
     background: ${({ theme }) => theme.palette.background.default};
     color: ${({ theme }) => theme.palette.primary.light};
+    box-shadow: none;
   }
 `
 
@@ -59,7 +65,7 @@ export const LogoBasement = styled.div`
     left: -20px;
     border-radius: 50%;
   }
-  
+
   img {
     position: relative;
   }
@@ -76,8 +82,9 @@ export const CopyrightInfo = styled.span`
 
 export const SocialMediaLink = styled.a`
   cursor: pointer;
+
   :hover {
     opacity: 0.7;
-    filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.4));
+    filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.4));
   }
 `
