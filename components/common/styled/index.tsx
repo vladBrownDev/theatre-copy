@@ -30,14 +30,17 @@ export const CornerContainer = styled.div`
   justify-content: space-between;
 `
 
-export const NavLink = styled.a`
-  margin: 0 ${({ theme }) => theme.spacing(2)};
+export const NavLink = styled.a<{ authorisation?: boolean }>`
+  margin: 0 10%;
+  padding-top: inherit;
+  padding-bottom: inherit;
   display: block;
   text-align: center;
   font-size: 25px;
   cursor: pointer;
   border-radius: 6px;
   transition-duration: 0.4s;
+  ${({ authorisation }) => authorisation && "font-weight: bold; border: 1px solid;"};
   :hover {
     background: ${({ theme }) => theme.palette.background.default};
     color: ${({ theme }) => theme.palette.primary.light};

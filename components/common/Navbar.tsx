@@ -21,37 +21,57 @@ const Navbar = () => {
             alignItems="center"
             container
             columnSpacing={2}
-            pb="15px"
+            pb="6px"
             pt="96px"
           >
-            <Grid item xs={1}></Grid>
-            <Grid item xs={2}>
-              <NavLink href="/news">
-                NEWS
-              </NavLink>
-            </Grid>
-            <Grid item xs={2}>
-              <NavLink href="/talents">
-                TALENTS
-              </NavLink>
-            </Grid>
-            <Grid item xs={2} position="relative">
-              <Grid container justifyContent="center">
-                <Box position="absolute" top="-34px">
-                  <LogoBasement>
-                    <Image src="/Logo.svg" width={69} height={69} alt=""/>
-                  </LogoBasement>
-                </Box>
+
+            <Grid
+              columnSpacing={1}
+              container
+              item
+              justifyContent="flex-end"
+              xs={5}
+            >
+              <Grid item paddingY="5px" xs={4}>
+                <NavLink href="/news">
+                  NEWS
+                </NavLink>
+              </Grid>
+              <Grid item paddingY="5px" xs={4}>
+                <NavLink href="/talents">
+                  TALENTS
+                </NavLink>
               </Grid>
             </Grid>
-            <Grid item xs={3}>
-              <NavLink href="online-theatre">
-                ONLINE THEATRE
-              </NavLink>
+
+            <Grid item xs={2} position="relative" container justifyContent="center">
+              <Box position="absolute" top="-34px">
+                <LogoBasement>
+                  <Image src="/Logo.svg" width={69} height={69} alt=""/>
+                </LogoBasement>
+              </Box>
             </Grid>
-            <Grid item xs={2}>
-              Login
+
+            <Grid
+              alignItems="center"
+              columnSpacing={1}
+              container
+              item
+              justifyContent="flex-start"
+              xs={5}
+            >
+              <Grid item xs={7} paddingY="5px">
+                <NavLink href="online-theatre">
+                  ONLINE THEATRE
+                </NavLink>
+              </Grid>
+              <Grid item xs={4} paddingY="7px">
+                <NavLink authorisation>
+                  LOGIN
+                </NavLink>
+              </Grid>
             </Grid>
+
           </Grid>
         </Container>
       </Nav>
