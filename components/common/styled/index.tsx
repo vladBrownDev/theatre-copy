@@ -12,7 +12,7 @@ export type TCorner = {
 }
 
 export const Corner = styled(Image)<TCorner>`
-  ${({ division }) => division === "navbar" ? "margin-top: -0.5px;" : "bottom: 0px"};
+  ${({ division }) => division === "navbar" ? "margin-top: -0.8px;" : "bottom: 0px"};
   ${({ position }) => position === "left" ? "left: 0px" : "transform: scaleX(-1); right: 0px !important"};
 `
 
