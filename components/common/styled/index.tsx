@@ -14,13 +14,13 @@ export type TCorner = {
 export const Corner = styled(Image)<TCorner>(({ division, position }) => {
   if (division === "navbar") {
     return {
-      ...(position === "left" && { transform: "translateY(-0.8px)" }),
-      ...(position === "right" && { transform: "translateY(-0.8px) scaleX(-1)" })
+      ...(position === "left" && { transform: "translateY(-1px)" }),
+      ...(position === "right" && { transform: "translateY(-1px) scaleX(-1)" })
     }
   } else {
     return {
-      ...(position === "left" && { transform: "translateY(0.8px) rotate(180deg) scaleX(-1)" }),
-      ...(position === "right" && { transform: "translateY(0.8px) rotate(180deg)" })
+      ...(position === "left" && { transform: "translateY(1px) rotate(180deg) scaleX(-1)" }),
+      ...(position === "right" && { transform: "translateY(1px) rotate(180deg)" })
     }
   }
 })
