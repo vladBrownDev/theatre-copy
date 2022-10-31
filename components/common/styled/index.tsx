@@ -61,3 +61,16 @@ export const LogoBasement = styled.div`
     position: relative;
   }
 `
+
+export const Foot = styled.footer`
+  background: ${({ theme }) => theme.palette.primary.main};
+  position: relative;
+`
+
+export const SocialMediaLink = styled.a`
+  cursor: pointer;
+  :hover {
+    opacity: 0.7;
+    filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.4));
+  }
+`
