@@ -67,6 +67,10 @@ export const Foot = styled.footer`
   position: relative;
 `
 
+export const CopyrightInfo = styled.span`
+  cursor: default;
+`
+
 export const SocialMediaLink = styled.a`
   cursor: pointer;
   :hover {

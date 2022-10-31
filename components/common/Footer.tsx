@@ -10,6 +10,7 @@ import {
 } from "@mui/material"
 import { CurtainCorner } from "./index"
 import {
+  CopyrightInfo,
   CornerContainer,
   Foot,
   SocialMediaLink
@@ -32,7 +33,9 @@ const Footer = () => {
             pt="24px"
           >
             <Grid item xs={3} fontSize="18px">
-              2022 © All rights reserved.
+              <CopyrightInfo>
+                2022 © All rights reserved.
+              </CopyrightInfo>
             </Grid>
             <Grid item xs={4}>
               <Grid container justifyContent="center">
