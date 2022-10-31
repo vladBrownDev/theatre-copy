@@ -11,9 +11,23 @@ export type TCorner = {
   position: "left" | "right"
 }
 
-export const Corner = styled(Image)<TCorner>`
-  ${({ division }) => division === "navbar" ? "margin-top: -0.8px;" : "bottom: 0px"};
-  ${({ position }) => position === "left" ? "left: 0px" : "transform: scaleX(-1); right: 0px !important"};
+export const Corner = styled(Image)<TCorner>(({ division, position }) => {
+  if (division === "navbar") {
+    return {
+      ...(position === "left" && { transform: "translateY(-0.8px)" }),
+      ...(position === "right" && { transform: "translateY(-0.8px) scaleX(-1)" })
+    }
+  } else {
+    return {
+      ...(position === "left" && { transform: "translateY(0.8px) rotate(180deg) scaleX(-1)" }),
+      ...(position === "right" && { transform: "translateY(0.8px) rotate(180deg)" })
+    }
+  }
+})
+
+export const CornerContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
 `
 
 export const NavLink = styled.a`

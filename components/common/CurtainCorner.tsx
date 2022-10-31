@@ -16,7 +16,6 @@ const CurtainCorner = ({ division, position }: Props) => {
       height={139}
       position={position}
       src="/Corner.svg"
-      style={{ position: "absolute" }}
       width={187}
     />
   )

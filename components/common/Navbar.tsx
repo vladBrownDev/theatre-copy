@@ -6,6 +6,7 @@ import {
 } from "@mui/material"
 import { CurtainCorner } from "."
 import {
+  CornerContainer,
   LogoBasement,
   Nav,
   NavLink,
@@ -53,9 +54,11 @@ const Navbar = () => {
             </Grid>
           </Grid>
         </Container>
+      </Nav>
+      <CornerContainer>
         <CurtainCorner division="navbar" position="left"/>
         <CurtainCorner division="navbar" position="right"/>
-      </Nav>
+      </CornerContainer>
     </>
   )
 }
