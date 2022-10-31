@@ -15,7 +15,7 @@ const CurtainCorner = ({ division, position }: Props) => {
       division={division}
       height={139}
       position={position}
-      src="/Corner.svg"
+      src="/assets/Corner.svg"
       width={187}
     />
   )

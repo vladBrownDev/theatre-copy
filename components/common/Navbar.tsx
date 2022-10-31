@@ -47,7 +47,7 @@ const Navbar = () => {
             <Grid item xs={2} position="relative" container justifyContent="center">
               <Box position="absolute" top="-34px">
                 <LogoBasement>
-                  <Image src="/Logo.svg" width={69} height={69} alt=""/>
+                  <Image src="/assets/Logo.svg" width={69} height={69} alt=""/>
                 </LogoBasement>
               </Box>
             </Grid>
