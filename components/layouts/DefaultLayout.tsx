@@ -4,10 +4,16 @@ import {
   Box,
   useTheme
 } from "@mui/material"
+import { Antonio } from "@next/font/google"
 import {
   Footer,
   Navbar
 } from "../common"
+
+const antonio = Antonio({
+  weight: "400",
+  subsets: ["latin"]
+})
 
 type Props = {
   children: React.ReactNode
@@ -16,19 +22,21 @@ type Props = {
 const DefaultLayout = ({ children }: Props) => {
   const theme = useTheme()
   return (
-    <Box bgcolor={theme.palette.background.default}>
+    <html className={antonio.className}>
+      <Box bgcolor={theme.palette.background.default}>
 
-      <Head>
-        <title>Theatre Universe</title>
-      </Head>
+        <Head>
+          <title>Theatre Universe</title>
+        </Head>
 
-      <Navbar/>
+        <Navbar/>
 
-      <main>{children}</main>
+        <main>{children}</main>
 
-      <Footer/>
+        <Footer/>
 
-    </Box>
+      </Box>
+    </html>
   )
 }
 
