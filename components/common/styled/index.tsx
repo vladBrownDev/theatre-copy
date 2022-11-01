@@ -37,7 +37,7 @@ export const CornerContainer = styled.div`
   pointer-events: none;
 `
 
-const ButtonLightBehaviour = (theme : Theme) =>  css`
+const ButtonLightBehaviour = (theme: Theme) => css`
   :hover {
     box-shadow: ${theme.shadows[5]};
   }
@@ -90,20 +90,20 @@ export const LogoBasement = styled.div`
     left: -20px;
     border-radius: 50%;
   }
-  
+
   cursor: pointer;
 
   img {
     transition-duration: 0.4s;
     position: relative;
   }
-  
+
   :hover img {
-    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.5));
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
   }
-  
+
   :active img {
-    filter: invert(1)};
+    filter: invert(1);
   }
 `
 
