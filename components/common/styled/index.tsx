@@ -1,5 +1,9 @@
 import Image from "next/image"
 import styled from "@emotion/styled"
+import {
+  css,
+  Theme
+} from "@mui/material"
 
 
 export const Nav = styled.nav`
@@ -33,7 +37,30 @@ export const CornerContainer = styled.div`
   pointer-events: none;
 `
 
-export const NavLink = styled.a<{ authorisation?: boolean }>`
+const ButtonLightBehaviour = (theme : Theme) =>  css`
+  :hover {
+    box-shadow: ${theme.shadows[5]};
+  }
+
+  :active {
+    background: ${theme.palette.background.default};
+    color: ${theme.palette.primary.light};
+    box-shadow: none;
+  }
+
+  :focus-visible {
+    background: ${theme.palette.background.default};
+    color: ${theme.palette.primary.light};
+    outline: ${theme.palette.primary.dark} solid 4px;
+  }
+
+  &[disabled] {
+    background: ${theme.palette.text.disabled} !important;
+    color: ${theme.palette.primary.dark};
+  }
+`
+
+export const NavLink = styled.a<{ authorisation?: boolean, disabled?: boolean }>`
   color: ${({ theme }) => theme.palette.text.primary};
   margin: 0 10%;
   padding-top: inherit;
@@ -48,16 +75,7 @@ export const NavLink = styled.a<{ authorisation?: boolean }>`
           "font-weight: bold;" +
           "border: 1px solid;"
   };
-
-  :hover {
-    box-shadow: inset 2px 2px 4px;
-  }
-
-  :active {
-    background: ${({ theme }) => theme.palette.background.default};
-    color: ${({ theme }) => theme.palette.primary.light};
-    box-shadow: none;
-  }
+  ${({ theme }) => ButtonLightBehaviour(theme)}
 `
 
 export const LogoBasement = styled.div`
