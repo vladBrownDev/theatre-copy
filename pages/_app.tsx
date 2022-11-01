@@ -12,7 +12,10 @@ import {
   useMediaQuery
 } from "@mui/material"
 import { ThemeProvider } from "@mui/material/styles"
-import DefaultLayout from "../components/layouts/DefaultLayout"
+import {
+  DefaultLayout,
+  RootLayout
+} from "../components/layouts"
 import client from "../src/api"
 import "../styles/globals.css"
 import { globalTheme } from "../src/themes"
@@ -49,7 +52,9 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     <ApolloProvider client={client}>
       <ThemeProvider theme={theme}>
         <EmotionThemeProvider theme={theme}>
-          {componentWithLayout}
+          <RootLayout>
+            {componentWithLayout}
+          </RootLayout>
         </EmotionThemeProvider>
       </ThemeProvider>
     </ApolloProvider>
