@@ -90,9 +90,20 @@ export const LogoBasement = styled.div`
     left: -20px;
     border-radius: 50%;
   }
+  
+  cursor: pointer;
 
   img {
+    transition-duration: 0.4s;
     position: relative;
+  }
+  
+  :hover img {
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.5));
+  }
+  
+  :active img {
+    filter: invert(1)};
   }
 `
 
