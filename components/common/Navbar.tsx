@@ -32,12 +32,12 @@ const Navbar = () => {
               justifyContent="flex-end"
               xs={5}
             >
-              <Grid item paddingY="5px" xs={4}>
+              <Grid item paddingY="5px" xs={3}>
                 <NavLink href="/news">
                   NEWS
                 </NavLink>
               </Grid>
-              <Grid item paddingY="5px" xs={4}>
+              <Grid item paddingY="5px" xs={3}>
                 <NavLink href="/talents">
                   TALENTS
                 </NavLink>
@@ -60,13 +60,13 @@ const Navbar = () => {
               justifyContent="flex-start"
               xs={5}
             >
-              <Grid item xs={7} paddingY="5px">
+              <Grid item xs={5} paddingY="5px">
                 <NavLink href="online-theatre">
                   ONLINE THEATRE
                 </NavLink>
               </Grid>
-              <Grid item xs={4} paddingY="7px">
-                <NavLink authorisation>
+              <Grid item xs={3} paddingY="7px">
+                <NavLink href="authorisation" authorisation>
                   LOGIN
                 </NavLink>
               </Grid>
