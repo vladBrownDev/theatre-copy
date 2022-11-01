@@ -2,10 +2,15 @@ import type {
   ReactElement,
   ReactNode
 } from "react"
+import { useMemo } from "react"
 import type { NextPage } from "next"
 import type { AppProps } from "next/app"
 import { ApolloProvider } from "@apollo/client"
 import { ThemeProvider as EmotionThemeProvider } from "@emotion/react"
+import {
+  createTheme,
+  useMediaQuery
+} from "@mui/material"
 import { ThemeProvider } from "@mui/material/styles"
 import DefaultLayout from "../components/layouts/DefaultLayout"
 import client from "../src/api"
@@ -21,6 +26,8 @@ type AppPropsWithLayout = AppProps & {
 }
 
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)")
+
   let componentWithLayout
   if (Component.getLayout) {
     const getLayout = Component.getLayout
@@ -33,10 +40,15 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     )
   }
 
+  const theme = useMemo(() =>
+      createTheme(globalTheme(prefersDarkMode ? "dark" : "light"))
+    , [prefersDarkMode])
+
+
   return (
     <ApolloProvider client={client}>
-      <ThemeProvider theme={globalTheme}>
-        <EmotionThemeProvider theme={globalTheme}>
+      <ThemeProvider theme={theme}>
+        <EmotionThemeProvider theme={theme}>
           {componentWithLayout}
         </EmotionThemeProvider>
       </ThemeProvider>

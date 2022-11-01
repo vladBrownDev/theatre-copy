@@ -34,6 +34,7 @@ export const CornerContainer = styled.div`
 `
 
 export const NavLink = styled.a<{ authorisation?: boolean }>`
+  color: ${({ theme }) => theme.palette.text.primary};
   margin: 0 10%;
   padding-top: inherit;
   padding-bottom: inherit;
@@ -43,7 +44,10 @@ export const NavLink = styled.a<{ authorisation?: boolean }>`
   cursor: pointer;
   border-radius: 6px;
   transition-duration: 0.4s;
-  ${({ authorisation }) => authorisation && "font-weight: bold; border: 1px solid;"};
+  ${({ authorisation }) => authorisation &&
+          "font-weight: bold;" +
+          "border: 1px solid;"
+  };
 
   :hover {
     box-shadow: inset 2px 2px 4px;
