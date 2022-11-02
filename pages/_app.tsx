@@ -12,12 +12,14 @@ import {
   useMediaQuery
 } from "@mui/material"
 import { ThemeProvider } from "@mui/material/styles"
+import { appWithTranslation } from "next-i18next"
 import {
   DefaultLayout,
   RootLayout
 } from "../components/layouts"
 import client from "../src/api"
 import "../styles/globals.css"
+import "../i18n"
 import { globalTheme } from "../src/themes"
 
 export type NextPageWithLayout<P = Record<string, unknown>, IP = P> = NextPage<P, IP> & {
@@ -28,7 +30,7 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
 
-export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)")
 
   let componentWithLayout
@@ -60,3 +62,5 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     </ApolloProvider>
   )
 }
+
+export default appWithTranslation(MyApp)
