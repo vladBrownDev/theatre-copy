@@ -77,7 +77,7 @@ const Navbar = () => {
           </Grid>
         </Container>
       </Nav>
-      <CornerContainer>
+      <CornerContainer absolute>
         <CurtainCorner division="navbar" position="left"/>
         <CurtainCorner division="navbar" position="right"/>
       </CornerContainer>

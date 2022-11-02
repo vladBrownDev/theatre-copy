@@ -9,6 +9,8 @@ import {
 export const Nav = styled.nav`
   background: ${({ theme }) => theme.palette.primary.main};
   user-select: none;
+  position: relative;
+  z-index: ${({ theme }) => theme.zIndex.appBar};
 `
 
 export type TCorner = {
@@ -30,11 +32,14 @@ export const Corner = styled(Image)<TCorner>(({ division, position }) => {
   }
 })
 
-export const CornerContainer = styled.div`
+export const CornerContainer = styled.div<{ absolute?: boolean }>`
+  ${({ absolute }) => absolute && "position: absolute;"}
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   user-select: none;
   pointer-events: none;
+  z-index: ${({ theme }) => theme.zIndex.appBar};
 `
 
 const ButtonLightBehaviour = (theme: Theme) => css`
