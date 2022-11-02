@@ -4,6 +4,7 @@ import {
   Container,
   Grid,
 } from "@mui/material"
+import { useTranslation } from "next-i18next"
 import { CurtainCorner } from "."
 import {
   CornerContainer,
@@ -13,6 +14,7 @@ import {
 } from "./styled"
 
 const Navbar = () => {
+  const { t } = useTranslation(["common"])
   return (
     <>
       <Nav>
@@ -34,12 +36,12 @@ const Navbar = () => {
             >
               <Grid item paddingY="5px" xs={3}>
                 <NavLink href="/news">
-                  NEWS
+                  {t("news").toUpperCase()}
                 </NavLink>
               </Grid>
               <Grid item paddingY="5px" xs={3}>
                 <NavLink href="/talents">
-                  TALENTS
+                  {t("talents").toUpperCase()}
                 </NavLink>
               </Grid>
             </Grid>
@@ -62,12 +64,12 @@ const Navbar = () => {
             >
               <Grid item xs={5} paddingY="5px">
                 <NavLink href="online-theatre">
-                  ONLINE THEATRE
+                  {t("online_theatre").toUpperCase()}
                 </NavLink>
               </Grid>
               <Grid item xs={3} paddingY="7px">
                 <NavLink href="authorisation" authorisation>
-                  LOGIN
+                  {t("login").toUpperCase()}
                 </NavLink>
               </Grid>
             </Grid>
