@@ -8,6 +8,7 @@ import {
   Container,
   Grid
 } from "@mui/material"
+import { useTranslation } from "next-i18next"
 import { CurtainCorner } from "./index"
 import {
   CopyrightInfo,
@@ -17,6 +18,7 @@ import {
 } from "./styled"
 
 const Footer = () => {
+  const { t } = useTranslation(["common"])
   return (
     <>
       <CornerContainer>
@@ -34,7 +36,7 @@ const Footer = () => {
           >
             <Grid item xs={3} fontSize="18px">
               <CopyrightInfo>
-                2022 © All rights reserved.
+                {t("rights")}
               </CopyrightInfo>
             </Grid>
             <Grid item xs={4}>
