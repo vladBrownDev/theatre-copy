@@ -34,12 +34,12 @@ const Navbar = () => {
               justifyContent="flex-end"
               xs={5}
             >
-              <Grid item paddingY="5px" xs={3}>
+              <Grid item paddingY="5px" xs={4}>
                 <NavLink href="/news">
                   {t("news").toUpperCase()}
                 </NavLink>
               </Grid>
-              <Grid item paddingY="5px" xs={3}>
+              <Grid item paddingY="5px" xs={4}>
                 <NavLink href="/talents">
                   {t("talents").toUpperCase()}
                 </NavLink>
@@ -62,12 +62,12 @@ const Navbar = () => {
               justifyContent="flex-start"
               xs={5}
             >
-              <Grid item xs={5} paddingY="5px">
+              <Grid item xs={6} paddingY="5px">
                 <NavLink href="online-theatre">
                   {t("online_theatre").toUpperCase()}
                 </NavLink>
               </Grid>
-              <Grid item xs={3} paddingY="7px">
+              <Grid item xs={4} paddingY="7px">
                 <NavLink href="authorisation" authorisation>
                   {t("login").toUpperCase()}
                 </NavLink>
