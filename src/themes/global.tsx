@@ -1,4 +1,5 @@
 import { PaletteMode } from "@mui/material"
+import { Typography } from "@mui/material/styles/createTypography"
 
 const globalTheme = (mode: PaletteMode) => ({
   palette: {
@@ -20,6 +21,9 @@ const globalTheme = (mode: PaletteMode) => ({
       secondary: "#1c1c1c",
     },
   },
+  typography: {
+    fontFamily: "inherit",
+  } as Typography,
 })
 
 export default globalTheme
