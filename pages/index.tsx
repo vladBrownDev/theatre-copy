@@ -19,7 +19,7 @@ import {
   MainQuote,
   MainTitle,
   QuoteLine
-} from "../components/common/styled"
+} from "../components/pages/homePage/styled"
 
 
 const Home = () => {
