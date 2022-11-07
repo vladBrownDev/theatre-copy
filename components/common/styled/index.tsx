@@ -129,3 +129,12 @@ export const SocialMediaLink = styled.a`
     filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.4));
   }
 `
+
+export const CarouselItem = styled.div`
+  transition-duration: 0.5s;
+  user-select: none;
+  
+  &[data-active=true] {
+    transform: scale(1.2);
+  }
+`
