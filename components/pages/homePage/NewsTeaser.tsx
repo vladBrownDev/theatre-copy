@@ -11,7 +11,7 @@ type Props = {
   image: string
 }
 
-const News = ({ children, image }: Props) => {
+const NewsTeaser = ({ children, image }: Props) => {
   return (
     <>
       <Box
@@ -22,7 +22,7 @@ const News = ({ children, image }: Props) => {
       >
         <NewsArch outer src="/assets/news_effect_2.svg" alt="" width="455" height="455" />
         <NewsArch src="/assets/news_effect_1.svg" alt="" width="158" height="315" />
-        <Image src={image} alt="News image" width="394" height="394" />
+        <Image src={image} alt="NewsTeaser image" width="394" height="394" />
         <NewsArch reverted src="/assets/news_effect_1.svg" alt="" width="158" height="315" />
         <NewsArch outer reverted src="/assets/news_effect_2.svg" alt="" width="455" height="455" />
       </Box>
@@ -33,4 +33,4 @@ const News = ({ children, image }: Props) => {
   )
 }
 
-export default News
+export default NewsTeaser

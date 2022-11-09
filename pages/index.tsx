@@ -19,7 +19,7 @@ import {
 } from "../components/common"
 import {
   MainTitle,
-  News,
+  NewsTeaser,
   Quote,
   Teaser,
   TeaserCarousel,
@@ -196,7 +196,9 @@ const Home = () => {
         <Box minHeight="40vh"/>
 
         <Parallax speed={5}>
-          <News image="/assets/news_teaser_image.png">News and reviews about new premiers. Stay up to date!</News>
+          <NewsTeaser image="/assets/news_teaser_image.png">
+            News and reviews about new premiers. Stay up to date!
+          </NewsTeaser>
         </Parallax>
 
         <Box minHeight="40vh"/>
