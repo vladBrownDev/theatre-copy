@@ -20,45 +20,54 @@ import {
   TalentsTeaser,
   TitleWithLogo
 } from "../components/pages/homePage"
+import { BannerLayer } from "react-scroll-parallax/src/components/ParallaxBanner/types"
+
+const NavLayer: BannerLayer = {
+  speed: 10,
+  children: <Navbar/>,
+  style: { zIndex: 9999, position: "relative", inset: "-20px 0" }
+}
+
+const BGLayer: BannerLayer = {
+  speed: -20,
+  children: (
+    <Box position="relative" width="100vw" height="calc(100vw * 0.6);">
+      <Image
+        src="/assets/home_page_main.png"
+        fill
+        alt="Night starry sky"
+        sizes="(min-width: 0px) 100vw"
+      />
+    </Box>
+  )
+}
+
+const TitleLayer: BannerLayer = {
+  speed: -5,
+  opacity: [1, 0.3],
+  shouldAlwaysCompleteAnimation: true,
+  children: (
+    <MainTitle variant="h1">
+      THEATRE UNIVERSE
+    </MainTitle>
+  ),
+  style: { inset: "30em 0" }
+}
 
 const Home = () => {
-
   return (
     <>
-      <Box minHeight="200vh" width="100vw" position="relative" bgcolor={({ palette }) => palette.background.default}>
+      <Box
+        bgcolor={({ palette }) => palette.background.default}
+        position="relative"
+        width="100vw"
+      >
 
         <ParallaxBanner
           layers={[
-            {
-              speed: 10,
-              children: <Navbar/>,
-              style: { zIndex: 9999, position: "relative", inset: "-20px 0" }
-            },
-            {
-              speed: -20,
-              children: (
-                <Box position="relative" width="100vw" height="calc(100vw * 0.6);">
-                  <Image
-                    src="/assets/home_page_main.png"
-                    fill
-                    alt="Night starry sky"
-                    sizes="(min-width: 0px) 100vw"
-                  />
-                </Box>
-
-              ),
-            },
-            {
-              speed: -5,
-              opacity: [1, 0.3],
-              shouldAlwaysCompleteAnimation: true,
-              children: (
-                <MainTitle variant="h1">
-                  THEATRE UNIVERSE
-                </MainTitle>
-              ),
-              style: { inset: "30em 0" }
-            }
+            NavLayer,
+            BGLayer,
+            TitleLayer
           ]}
           style={{ aspectRatio: "16/9" }}
         />
