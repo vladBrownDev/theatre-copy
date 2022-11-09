@@ -5,6 +5,7 @@ import {
   Grid,
 } from "@mui/material"
 import { useTranslation } from "next-i18next"
+import LogoSVG from "public/assets/Logo.svg"
 import { CurtainCorner } from "."
 import {
   CornerContainer,
@@ -49,7 +50,7 @@ const Navbar = () => {
             <Grid item xs={2} position="relative" container justifyContent="center">
               <Box position="absolute" top="-34px">
                 <LogoBasement>
-                  <Image src="/assets/Logo.svg" width={69} height={69} alt=""/>
+                  <Image src={LogoSVG} width={69} height={69} alt=""/>
                 </LogoBasement>
               </Box>
             </Grid>

@@ -1,3 +1,4 @@
+import CornerSVG from "public/assets/Corner.svg"
 import {
   Corner,
   TCorner
@@ -15,7 +16,7 @@ const CurtainCorner = ({ division, position }: Props) => {
       division={division}
       height={139}
       position={position}
-      src="/assets/Corner.svg"
+      src={CornerSVG}
       width={187}
     />
   )
