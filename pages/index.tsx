@@ -20,6 +20,7 @@ import {
   MainTitle,
   NewsTeaser,
   Quote,
+  TalentsTeaser,
   Teaser,
   TeaserCarousel,
   TeaserCarouselWrapper,
@@ -112,25 +113,7 @@ const Home = () => {
         <Box minHeight="40vh"/>
 
         <Parallax speed={5}>
-          <TeaserCarouselWrapper>
-            <TeaserCarousel>
-              <Carousel
-                items={actors}
-                loop
-                perSlide={5}
-                gutter={40}
-                initialStartingPosition="center"
-              />
-            </TeaserCarousel>
-          </TeaserCarouselWrapper>
-
-          <Box position="relative" marginTop="7em">
-            <Teaser link="/talents">The best actors for casts of for your own projects</Teaser>
-            <VideoStyled autoPlay loop muted>
-              <source src="/assets/spotlight.mp4"/>
-            </VideoStyled>
-          </Box>
-
+          <TalentsTeaser>The best actors for casts or for your own projects</TalentsTeaser>
         </Parallax>
 
         <Box minHeight="40vh"/>
