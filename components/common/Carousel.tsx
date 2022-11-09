@@ -39,9 +39,9 @@ export const Carousel = ({
   })
 
   return (
-    <>
-      <div>{carouselFragment}</div>
-    </>
+    <div style={{ overflowX: "clip" }}>
+      {carouselFragment}
+    </div>
   )
 }
 
