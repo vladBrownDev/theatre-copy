@@ -6,50 +6,20 @@ import {
 } from "react-scroll-parallax"
 import { GetStaticProps } from "next"
 import Image from "next/image"
-import {
-  Box,
-} from "@mui/material"
+import { Box } from "@mui/material"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
-  Carousel,
-  CarouselItems,
   Footer,
   Navbar
 } from "../components/common"
 import {
   MainTitle,
   NewsTeaser,
+  OnlineTheatreTeaser,
   Quote,
   TalentsTeaser,
-  Teaser,
-  TeaserCarousel,
-  TeaserCarouselWrapper,
-  TitleWithLogo,
-  VideoStyled
+  TitleWithLogo
 } from "../components/pages/homePage"
-
-const actors: CarouselItems = [
-  {
-    id: "0",
-    renderItem: <Image draggable={false} src="/assets/actor1.png" width={220} height={330} alt="Actor 1"/>
-  },
-  {
-    id: "1",
-    renderItem: <Image draggable={false} src="/assets/actor2.png" width={220} height={330} alt="Actor 2"/>
-  },
-  {
-    id: "2",
-    renderItem: <Image draggable={false} src="/assets/actor1.png" width={220} height={330} alt="Actor 1"/>
-  },
-  {
-    id: "3",
-    renderItem: <Image draggable={false} src="/assets/actor2.png" width={220} height={330} alt="Actor 2"/>
-  },
-  {
-    id: "4",
-    renderItem: <Image draggable={false} src="/assets/actor1.png" width={220} height={330} alt="Actor 1"/>
-  },
-]
 
 const Home = () => {
 
@@ -132,35 +102,9 @@ const Home = () => {
         <Box minHeight="40vh" />
 
         <Parallax speed={5}>
-          <TeaserCarouselWrapper>
-            <TeaserCarousel>
-              <Carousel
-                items={actors}
-                loop
-                perSlide={5}
-                gutter={40}
-                initialStartingPosition="center"
-              />
-            </TeaserCarousel>
-          </TeaserCarouselWrapper>
-
-          <Box position="relative" marginTop="7em" style={{ overflowX: "clip" }}>
-            <Teaser link="/online-theatre">Online Theatre to watch plays whenever you want</Teaser>
-            <VideoStyled autoPlay loop muted>
-              <source src="/assets/spotlight.mp4"/>
-            </VideoStyled>
-            <VideoStyled autoPlay loop muted flipped>
-              <source src="/assets/Comp 4_1.mp4"/>
-            </VideoStyled>
-            <Image
-              style={{
-                position: "absolute",
-                top: "90px",
-                transform: "rotate(160deg)",
-                right: "-3em"
-              }}
-              src="/assets/Comp 3 2022-10-30 06.54.13 PM.png" alt="" width="384" height="216" />
-          </Box>
+          <OnlineTheatreTeaser>
+            Online Theatre to watch plays whenever you want
+          </OnlineTheatreTeaser>
         </Parallax>
 
         <Box minHeight="40vh"/>
