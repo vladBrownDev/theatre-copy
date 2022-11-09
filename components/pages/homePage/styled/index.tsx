@@ -41,7 +41,7 @@ export const TeaserCarouselWrapper = styled.div`
 `
 
 export const TeaserCarousel = styled.div`
-  
+
   :before {
     content: "";
     display: block;
@@ -86,25 +86,4 @@ export const NewsArch = styled(Image, { shouldForwardProp: isPropValid })<{ reve
       return reverted ? "right: 10%" : "left: 10%"
     }
   }};
-`
-
-export const VideoStyled = styled.video<{ flipped?: boolean }>`
-  width: 384px;
-  height: 216px;
-  position: absolute;
-  top: 90px;
-  
-  ${({ flipped }) => {
-    if (flipped) {
-      return `
-        right: -3.5em;
-        transform: rotate(160deg);
-      `
-    } else {
-      return `
-        left: -3.5em;
-        transform: rotate(20deg);
-      `
-    }
-  }}
 `

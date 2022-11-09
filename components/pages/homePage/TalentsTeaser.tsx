@@ -3,13 +3,13 @@ import Image from "next/image"
 import { Box } from "@mui/material"
 import {
   Carousel,
-  CarouselItems
+  CarouselItems,
+  Spotlight
 } from "../../common"
 import { Teaser } from "./index"
 import {
   TeaserCarousel,
-  TeaserCarouselWrapper,
-  VideoStyled
+  TeaserCarouselWrapper
 } from "./styled"
 
 const actors: CarouselItems = [
@@ -53,11 +53,9 @@ const TalentsTeaser = ({ children }: Props) => {
       </TeaserCarousel>
     </TeaserCarouselWrapper>
 
-    <Box position="relative" marginTop="7em" overflow="hidden">
+    <Box position="relative" marginTop="7em" style={{ overflowX: "clip" }}>
       <Teaser link="/talents">{children}</Teaser>
-      <VideoStyled autoPlay loop muted>
-        <source src="/assets/Comp 4_1.mp4"/>
-      </VideoStyled>
+      <Spotlight/>
     </Box>
   </>
 }

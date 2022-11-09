@@ -3,13 +3,13 @@ import Image from "next/image"
 import { Box } from "@mui/material"
 import {
   Carousel,
-  CarouselItems
+  CarouselItems,
+  Spotlight
 } from "../../common"
 import { Teaser } from "./index"
 import {
   TeaserCarousel,
-  TeaserCarouselWrapper,
-  VideoStyled
+  TeaserCarouselWrapper
 } from "./styled"
 
 const plays: CarouselItems = [
@@ -56,20 +56,8 @@ const OnlineTheatreTeaser = ({ children }: Props) => {
 
       <Box position="relative" marginTop="7em" style={{ overflowX: "clip" }}>
         <Teaser link="/online-theatre">{children}</Teaser>
-        <VideoStyled autoPlay loop muted>
-          <source src="/assets/Comp 4_1.mp4"/>
-        </VideoStyled>
-        <VideoStyled autoPlay loop muted flipped>
-          <source src="/assets/Comp 4_1.mp4"/>
-        </VideoStyled>
-        <Image
-          style={{
-            position: "absolute",
-            top: "90px",
-            transform: "rotate(160deg)",
-            right: "-3em"
-          }}
-          src="/assets/Comp 3 2022-10-30 06.54.13 PM.png" alt="" width="384" height="216"/>
+        <Spotlight/>
+        <Spotlight flipped/>
       </Box>
     </>
   )

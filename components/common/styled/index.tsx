@@ -218,3 +218,32 @@ export const TextIrradiation = css`
   background-clip: text;
   animation: ${TextRevealing} 5s linear infinite;
 `
+
+const Spotlight = (flipped: boolean) => css`
+  ${flipped ? `
+    right: -3.5em;
+    transform: rotate(160deg);
+  ` : `
+    left: -3.5em;
+    transform: rotate(20deg);
+  `}
+`
+
+export const DustParticles = styled.video<{ flipped?: boolean }>`
+  width: 384px;
+  height: 216px;
+  position: absolute;
+  top: 90px;
+  filter: brightness(1.7);
+  opacity: 0.5;
+
+  ${({ flipped }) => Spotlight(!!flipped)}
+`
+
+export const LightSource = styled(Image, { shouldForwardProp: isPropValid })<{ flipped?: boolean }>`
+  position: absolute;
+  top: 90px;
+  filter: blur(2px);
+  
+  ${({ flipped }) => Spotlight(!!flipped)}
+`

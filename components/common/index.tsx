@@ -1,5 +1,6 @@
 export { default as Navbar } from "./Navbar"
 export { default as Footer } from "./Footer"
 export { default as CurtainCorner } from "./CurtainCorner"
+export { default as Spotlight } from "./Spotlight"
 export * from "./Carousel"
 export * from "./styled"
