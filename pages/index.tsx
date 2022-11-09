@@ -13,6 +13,7 @@ import {
   Navbar
 } from "../components/common"
 import {
+  BreakImage,
   MainTitle,
   NewsTeaser,
   OnlineTheatreTeaser,
@@ -75,14 +76,7 @@ const Home = () => {
         <Box minHeight="90vh"/>
 
         <Parallax speed={-5}>
-          <Box position="relative" width="100vw" height="calc(100vw * 0.09)">
-            <Image
-              src="/assets/section_1_end.png"
-              fill
-              alt="Audience chairs"
-              sizes="(min-width: 0px) 100vw"
-            />
-          </Box>
+          <BreakImage image="/assets/section_1_end.png" />
         </Parallax>
 
         <Parallax speed={5} style={{ position: "relative", inset: "-20em 0" }}>
@@ -98,14 +92,7 @@ const Home = () => {
         <Box minHeight="40vh"/>
 
         <Parallax speed={-5}>
-          <Box position="relative" width="100vw" height="calc(100vw * 0.09)">
-            <Image
-              src="/assets/section_2_end.png"
-              fill
-              alt="Stage Lights"
-              sizes="(min-width: 0px) 100vw"
-            />
-          </Box>
+          <BreakImage image="/assets/section_2_end.png" />
         </Parallax>
 
         <Box minHeight="40vh" />
@@ -119,14 +106,7 @@ const Home = () => {
         <Box minHeight="40vh"/>
 
         <Parallax speed={-5}>
-          <Box position="relative" width="100vw" height="calc(100vw * 0.09)">
-            <Image
-              src="/assets/section_3_end.png"
-              fill
-              alt="Stage Lights"
-              sizes="(min-width: 0px) 100vw"
-            />
-          </Box>
+          <BreakImage image="/assets/section_3_end.png" />
         </Parallax>
 
         <Box minHeight="40vh"/>
