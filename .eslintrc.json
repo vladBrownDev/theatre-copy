@@ -12,7 +12,8 @@
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
   ],
   "parserOptions": {
     "sourceType": "module",
@@ -28,7 +29,8 @@
     "testing-library",
     "jest",
     "jest-formatting",
-    "prettier"
+    "prettier",
+    "react"
   ],
   "globals": {
     "jest": true,
@@ -49,6 +51,7 @@
   },
   "rules": {
     "no-console": 1,
+    "react/jsx-tag-spacing": 1,
     "react/react-in-jsx-scope": 0,
     "@typescript-eslint/no-var-requires": 0,
     "object-curly-spacing": [

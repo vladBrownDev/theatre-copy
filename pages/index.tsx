@@ -25,7 +25,7 @@ import { BannerLayer } from "react-scroll-parallax/src/components/ParallaxBanner
 
 const NavLayer: BannerLayer = {
   speed: 10,
-  children: <Navbar/>,
+  children: <Navbar />,
   style: { zIndex: 9999, position: "relative", inset: "-20px 0" }
 }
 
@@ -73,7 +73,7 @@ const Home = () => {
           style={{ aspectRatio: "16/9" }}
         />
 
-        <Box minHeight="90vh"/>
+        <Box minHeight="90vh" />
 
         <Parallax speed={-5}>
           <BreakImage image="/assets/section_1_end.png" />
@@ -83,13 +83,13 @@ const Home = () => {
           <Quote>Theatre Universe - a borderless world in your hands</Quote>
         </Parallax>
 
-        <Box minHeight="40vh"/>
+        <Box minHeight="40vh" />
 
         <Parallax speed={5}>
           <TalentsTeaser>The best actors for casts or for your own projects</TalentsTeaser>
         </Parallax>
 
-        <Box minHeight="40vh"/>
+        <Box minHeight="40vh" />
 
         <Parallax speed={-5}>
           <BreakImage image="/assets/section_2_end.png" />
@@ -103,13 +103,13 @@ const Home = () => {
           </OnlineTheatreTeaser>
         </Parallax>
 
-        <Box minHeight="40vh"/>
+        <Box minHeight="40vh" />
 
         <Parallax speed={-5}>
           <BreakImage image="/assets/section_3_end.png" />
         </Parallax>
 
-        <Box minHeight="40vh"/>
+        <Box minHeight="40vh" />
 
         <Parallax speed={5}>
           <NewsTeaser image="/assets/news_teaser_image.png">
@@ -117,16 +117,16 @@ const Home = () => {
           </NewsTeaser>
         </Parallax>
 
-        <Box minHeight="40vh"/>
+        <Box minHeight="40vh" />
 
         <Parallax speed={0.6}>
           <TitleWithLogo />
         </Parallax>
 
-        <Box minHeight="40vh"/>
+        <Box minHeight="40vh" />
 
         <Parallax speed={0.5}>
-          <Footer/>
+          <Footer />
         </Parallax>
 
       </Box>

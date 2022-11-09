@@ -22,8 +22,8 @@ const Footer = () => {
   return (
     <>
       <CornerContainer>
-        <CurtainCorner division="footer" position="left"/>
-        <CurtainCorner division="footer" position="right"/>
+        <CurtainCorner division="footer" position="left" />
+        <CurtainCorner division="footer" position="right" />
       </CornerContainer>
       <Foot>
         <Container maxWidth="lg">
@@ -43,22 +43,22 @@ const Footer = () => {
               <Grid container justifyContent="center">
                 <Grid item paddingX="15px" xs="auto">
                   <SocialMediaLink href="/" target="_blank">
-                    <Instagram fontSize="large"/>
+                    <Instagram fontSize="large" />
                   </SocialMediaLink>
                 </Grid>
                 <Grid item paddingX="15px">
                   <SocialMediaLink href="/" target="_blank">
-                    <Facebook fontSize="large"/>
+                    <Facebook fontSize="large" />
                   </SocialMediaLink>
                 </Grid>
                 <Grid item paddingX="15px">
                   <SocialMediaLink href="/" target="_blank">
-                    <YouTube fontSize="large"/>
+                    <YouTube fontSize="large" />
                   </SocialMediaLink>
                 </Grid>
                 <Grid item paddingX="15px">
                   <SocialMediaLink href="/" target="_blank">
-                    <Telegram fontSize="large"/>
+                    <Telegram fontSize="large" />
                   </SocialMediaLink>
                 </Grid>
               </Grid>

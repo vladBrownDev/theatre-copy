@@ -19,11 +19,11 @@ const Quote = ({ children, typography = true }: Props) => {
       justifyContent="center"
       style={{ userSelect: "none" }}
     >
-      <QuoteLine/>
+      <QuoteLine />
       {typography ? (
         <MainQuote variant="h2">{children}</MainQuote>
       ) : children}
-      <QuoteLine/>
+      <QuoteLine />
     </Box>
   )
 }

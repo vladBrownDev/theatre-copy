@@ -15,23 +15,23 @@ import {
 const actors: CarouselItems = [
   {
     id: "0",
-    renderItem: <Image draggable={false} src="/assets/actor1.png" width={220} height={330} alt="Actor 1"/>
+    renderItem: <Image draggable={false} src="/assets/actor1.png" width={220} height={330} alt="Actor 1" />
   },
   {
     id: "1",
-    renderItem: <Image draggable={false} src="/assets/actor2.png" width={220} height={330} alt="Actor 2"/>
+    renderItem: <Image draggable={false} src="/assets/actor2.png" width={220} height={330} alt="Actor 2" />
   },
   {
     id: "2",
-    renderItem: <Image draggable={false} src="/assets/actor1.png" width={220} height={330} alt="Actor 1"/>
+    renderItem: <Image draggable={false} src="/assets/actor1.png" width={220} height={330} alt="Actor 1" />
   },
   {
     id: "3",
-    renderItem: <Image draggable={false} src="/assets/actor2.png" width={220} height={330} alt="Actor 2"/>
+    renderItem: <Image draggable={false} src="/assets/actor2.png" width={220} height={330} alt="Actor 2" />
   },
   {
     id: "4",
-    renderItem: <Image draggable={false} src="/assets/actor1.png" width={220} height={330} alt="Actor 1"/>
+    renderItem: <Image draggable={false} src="/assets/actor1.png" width={220} height={330} alt="Actor 1" />
   },
 ]
 
@@ -55,7 +55,7 @@ const TalentsTeaser = ({ children }: Props) => {
 
     <Box position="relative" marginTop="7em" style={{ overflowX: "clip" }}>
       <Teaser link="/talents">{children}</Teaser>
-      <Spotlight/>
+      <Spotlight />
     </Box>
   </>
 }

@@ -50,7 +50,7 @@ const Navbar = () => {
             <Grid item xs={2} position="relative" container justifyContent="center">
               <Box position="absolute" top="-34px">
                 <LogoBasement>
-                  <Image src={LogoSVG} width={69} height={69} alt=""/>
+                  <Image src={LogoSVG} width={69} height={69} alt="" />
                 </LogoBasement>
               </Box>
             </Grid>
@@ -79,8 +79,8 @@ const Navbar = () => {
         </Container>
       </Nav>
       <CornerContainer absolute>
-        <CurtainCorner division="navbar" position="left"/>
-        <CurtainCorner division="navbar" position="right"/>
+        <CurtainCorner division="navbar" position="left" />
+        <CurtainCorner division="navbar" position="right" />
       </CornerContainer>
     </>
   )

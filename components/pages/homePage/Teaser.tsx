@@ -24,7 +24,7 @@ const Teaser = ({ children, link, tracery = true, ...rest }: Props) => {
         {...rest}
       >
         {tracery && (
-          <Image src="/assets/Tracery.png" width="266" height="78" alt=""/>
+          <Image src="/assets/Tracery.png" width="266" height="78" alt="" />
         )}
 
         <TeaserText>{children}</TeaserText>

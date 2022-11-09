@@ -25,11 +25,11 @@ const DefaultLayout = ({ children }: Props) => {
       <Box bgcolor={theme.palette.background.default}>
 
 
-        <Navbar/>
+        <Navbar />
 
         <main>{children}</main>
 
-        <Footer/>
+        <Footer />
 
       </Box>
     </>
