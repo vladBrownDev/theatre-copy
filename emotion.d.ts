@@ -2,7 +2,7 @@ import "@emotion/react"
 import { Theme } from "@mui/material"
 import { globalTheme } from "./src/themes"
 
-type MuiTheme = ReturnType<typeof globalTheme> & Theme
+type MuiTheme = typeof globalTheme & Theme
 
 declare module "@emotion/react" {
   // It's just a hack to provide MUI global theme type for @emotion

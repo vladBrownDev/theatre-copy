@@ -1,9 +1,8 @@
-import { PaletteMode } from "@mui/material"
+import { createTheme, } from "@mui/material"
 import { Typography } from "@mui/material/styles/createTypography"
 
-const globalTheme = (mode: PaletteMode) => ({
+const globalTheme = createTheme({
   palette: {
-    mode,
     primary: {
       main: "#F6F6F6",
       dark: "#878787",
