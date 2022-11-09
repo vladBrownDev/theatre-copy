@@ -8,7 +8,6 @@ import { GetStaticProps } from "next"
 import Image from "next/image"
 import {
   Box,
-  Typography
 } from "@mui/material"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
@@ -24,6 +23,7 @@ import {
   Teaser,
   TeaserCarousel,
   TeaserCarouselWrapper,
+  TitleWithLogo,
   VideoStyled
 } from "../components/pages/homePage"
 
@@ -204,24 +204,7 @@ const Home = () => {
         <Box minHeight="40vh"/>
 
         <Parallax speed={0.6}>
-          <Quote typography={false}>
-            <Box display="flex" justifyContent="center" alignItems="center" gap="20px">
-              <Typography color="#fff" variant="h2">
-                THEATRE
-              </Typography>
-              <Image
-                alt=""
-                draggable={false}
-                height={60}
-                src="/assets/Logo.svg"
-                style={{ filter: "invert(1)" }}
-                width={60}
-              />
-              <Typography color="#fff" variant="h2">
-                UNIVERSE
-              </Typography>
-            </Box>
-          </Quote>
+          <TitleWithLogo />
         </Parallax>
 
         <Box minHeight="40vh"/>
