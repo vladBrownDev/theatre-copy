@@ -162,6 +162,7 @@ const ButtonLight = (theme: Theme) => css`
   ${ButtonLightBehaviour(theme)}
 
   color: ${theme.palette.text.primary};
+  background: ${theme.palette.background.paper};
   border: 1px solid;
   border-radius: 6px;
   user-select: none;
@@ -178,7 +179,7 @@ const ButtonDark = (theme: Theme) => css`
   user-select: none;
 `
 
-export const ButtonStyled = styled(Button)<{ buttonStyle?: "light" | "dark" }>`
+export const ButtonStyled = styled(Button, { shouldForwardProp: isPropValid })<{ buttonStyle?: "light" | "dark" }>`
   ${({ theme, buttonStyle }) => buttonStyle === "dark" ? ButtonDark(theme) : ButtonLight(theme)}
 `
 
