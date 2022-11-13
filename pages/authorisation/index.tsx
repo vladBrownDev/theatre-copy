@@ -57,17 +57,17 @@ const Login = () => {
                     }}
                 />
                 <el.ForgotPassword>
-                    Forgot your password?
+                    {t("Forgot your password?")}
                 </el.ForgotPassword>
                 <el.LoginButton>
-                    Login
+                    {t("Login")}
                 </el.LoginButton>
                 <div style={{ marginTop: 32 }}>
                     <el.RegisterText>
-                        Not a Member?
+                        {t("Not a Member?")}
                     </el.RegisterText>
                     <el.RegisterBut>
-                        Register
+                        {t("Register")}
                     </el.RegisterBut>
                 </div>
                 <div style={{ 
