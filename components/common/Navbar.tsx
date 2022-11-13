@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import {
   Box,
   Container,
@@ -13,6 +14,8 @@ import {
   Nav,
   NavLink,
 } from "./styled"
+
+
 
 const Navbar = () => {
   const { t } = useTranslation(["common"])
@@ -69,8 +72,8 @@ const Navbar = () => {
                 </NavLink>
               </Grid>
               <Grid item xs={4} paddingY="7px">
-                <NavLink href="authorisation" authorisation>
-                  {t("login").toUpperCase()}
+                <NavLink href="/authorisation" authorisation>
+                    {t("login").toUpperCase()}
                 </NavLink>
               </Grid>
             </Grid>
